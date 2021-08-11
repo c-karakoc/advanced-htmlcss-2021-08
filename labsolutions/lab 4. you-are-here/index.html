@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My Trips</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/default.css">
+	<script src="script/trips.js"></script>
+	<link rel="stylesheet" href="https://openlayers.org/en/v5.0.0/css/ol.css">
+	<script src="https://openlayers.org/en/v5.0.0/build/ol.js"></script>
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<h1>MyTrips</h1>
+
+			<nav>
+				<ol>
+					<li><a href="index.html">Trips</a></li>
+					<li><a href="add-trip.html">Tip a trip</a></li>
+				</ol>
+			</nav>
+		</header>
+
+		<section id="trips">
+			<template id="trip-template">
+				<article class="trip">
+					<header>
+						<h2 class="city"></h2>
+						<time></time>
+					</header>
+					<div class="review"></div>
+					<meter min="0" max="10" high="7" low="5" optimum="10" value=""></meter>
+				</article>
+			</template>
+
+			<article class="trip">
+				<header>
+					<h2 class="city">Rome</h2>
+					<time>12/5/2005</time>
+				</header>
+				<div class="review">Had a great time, good food and splendid weather.</div>
+				<meter min="1" max="10" high="7" low="5" optimum="10" value="9">9</meter>
+			</article>
+			<article class="trip">
+				<header>
+					<h2 class="city">London</h2>
+					<time>4/1/2004</time>
+				</header>
+				<div class="review">Best holiday ever, plenty of free museums, history on every street corner and the
+					weather wasn't that bad.</div>
+				<meter min="1" max="10" high="7" low="5" optimum="10" value="10">10</meter>
+			</article>
+			<article class="trip">
+				<header>
+					<h2 class="city">Madrid</h2>
+					<time>7/5/2005</time>
+				</header>
+				<div class="review">Great town, too many tourists, very hot summer.</div>
+				<meter min="1" max="10" high="7" low="5" optimum="10" value="4">4</meter>
+			</article>
+			<article class="trip">
+				<header>
+					<h2 class="city">Los Angeles</h2>
+					<time>4/9/2011</time>
+				</header>
+				<div class="review">Huge town, make sure you know a couple of locals that can show you around. Nice
+					climate.</div>
+				<meter min="1" max="10" high="7" low="5" optimum="10" value="7">7</meter>
+			</article>
+		</section>
+
+		<hr>
+		<div id="location-error" hidden>
+			Could not determine location: 
+		</div>
+
+		<div id="map"></div>
+
+		<footer>Waldo &copy; 2020</footer>
+	</div>
+
+	<script>
+		loadTrips();
+		displayLocation();
+	</script>
+</body>
+
+</html>

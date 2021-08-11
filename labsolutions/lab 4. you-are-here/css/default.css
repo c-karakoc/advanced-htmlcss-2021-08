@@ -1,0 +1,157 @@
+body {
+	font-family: "Trebuchet MS", sans-serif;
+	color: silver;
+	background: black;
+}
+
+#container > header {
+	display: flex;
+	justify-content: space-between;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: x-large;
+	text-align: left;
+	padding: 10px 0 0 40px;
+	color: white;
+}
+main h2 {
+	background: #555;
+	padding: 10px;
+	margin: 10px 0;
+	font-weight: bold;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	color: white;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	background-color: #222;
+}
+
+nav ol {
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px 10px 0 0;
+}
+nav li {
+	margin: 10px 10px 10px 20px;
+}
+nav a {
+	padding: 10px 20px;
+	background-color: #63f453;
+	color: #000;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: bold;
+	transition: 0.3s ease all;
+	border-radius: 10px 0 10px 0;
+}
+nav a:hover {
+	background-color: #1cb70b;
+	box-shadow: 0 0 5px 3px lightgreen;
+}
+
+footer {
+	background-color: #2676ea;
+	color: white;
+	font-weight: bold;
+	font-size: small;
+	text-align: right;
+	padding: 40px 10px 0 0;
+	margin-top: 15px;
+}
+
+#trips {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.trip {
+	background: #d34927;
+	color: white;
+	padding: 5px;
+	margin: 5px;
+	width: calc(33.333333% - 10px - 10px);
+	border-radius: 7px;
+}
+.trip header {
+	display: flex;
+	justify-content: space-between;
+}
+.trip meter {
+	margin-top: 10px;
+}
+
+.city {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: white;
+	margin-bottom: 8px;
+}
+
+.review {
+	padding: 0 5px;
+}
+
+.rating {
+	text-align: right;
+}
+
+#location-error {
+	padding: 7px;
+	color: white;
+	text-align: center;
+	background: red;
+}
+
+/* form */
+form li {
+	display: flex;
+	padding: 5px 10px;
+}
+form label {
+	text-align: right;
+	width: 140px;
+	padding: 12px;
+	color: white;
+}
+input,
+textarea {
+	width: 300px;
+	border: 4px dashed #666;
+	background-color: #aaa;
+	padding: 5px;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 1em;
+	outline: none;
+}
+form button {
+	border: 0;
+	background: #23b9d3;
+	padding: 8px;
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-left: 200px;
+	width: 150px;
+}
+
+#btn-add-trip {
+	clear: both;
+	margin: 20px;
+	border: none;
+	padding: 12px;
+	display: block;
+	background: #23b9d3;
+	font-weight: bold;
+	outline: none;
+	width: calc(100% - 40px);
+}
+#map {
+	height: 300px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My Trips</title>
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<h1>MyTrips</h1>
+
+			<nav>
+				<ol>
+					<li><a href="index.html">Trips</a></li>
+					<li><a href="tip-a-trip.html">Tip a trip</a></li>
+				</ol>
+			</nav>
+		</header>
+
+		<main>
+			<h2>Add a trip</h2>
+
+			<form>
+				<ol>
+					<li>
+						<label for="input-location">Location?</label>
+						<input id="input-location" placeholder="What&#039;s the location of the trip?" required minlength="3" maxlength="30">
+					</li>
+					<li>
+						<label for="input-when">When did I go?</label>
+						<input type="date" id="input-when" placeholder="When is it specially nice there?" required pattern="\d{1,2}-\d{1,2}-\d{4}" placeholder="dd-mm-yyyy">
+					</li>
+					<li>
+						<label for="input-when">How was it?</label>
+						<input type="range" id="input-rating" required min="1" max="10" step="1">
+					</li>
+					<li>
+						<label for="input-reason">Describe it?</label>
+						<textarea id="input-reason" rows="5" placeholder="Why should I go there?"></textarea>
+					</li>
+					<li><button>Tip it!</button></li>
+				</ol>
+			</form>
+		</main>
+	
+		<footer>Waldo &copy; 2020</footer>
+	</div>
+
+</body>
+
+</html>
