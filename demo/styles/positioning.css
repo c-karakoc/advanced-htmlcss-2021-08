@@ -1,0 +1,71 @@
+
+#ugly-blokjes {
+	background: lightblue;
+	padding: 10px;
+}
+#ugly-blokjes div {
+	background: #0075c3;
+	color: white;
+	margin: 5px;
+	padding: 20px;
+	float: left;
+}
+.clear {
+	clear: left;
+}
+
+#ugly-layout nav {
+	background: lightgreen;
+	float: left;
+	width: 150px;
+}
+#ugly-layout article {
+	background: lightblue;
+	margin-left: 150px;
+	margin-right: 150px;
+}
+#ugly-layout aside {
+	background: lightgray;
+	float: right;
+	width: 150px;
+}
+
+
+
+#flex-blokjes {
+	background: lightblue;
+	padding: 10px;
+	display: flex; /* 2013 */
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: center;
+}
+#flex-blokjes div {
+	background: #0075c3;
+	color: white;
+	margin: 5px;
+	padding: 20px;
+}
+
+#flex-layout {
+	display: flex;
+	/* flex-direction: row-reverse; */
+}
+
+#flex-layout nav {
+	background: lightgreen;
+	order: 4;
+}
+#flex-layout article {
+	background: lightblue;
+	flex: 1;
+	order: 2;
+}
+#flex-layout .speciaal {
+	background: lightpink;
+	flex: 4;
+}
+#flex-layout aside {
+	background: lightgray;
+	order: 1;
+}

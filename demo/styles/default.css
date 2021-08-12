@@ -1,0 +1,113 @@
+
+/* @font-face {
+	src: url('woff2');
+	font-family: 'jouwnaam';
+} */
+
+/* maximum professionalism. apply this as much as possible. */
+/* body {
+	font-family: sans-serif;
+	transition: 4s ease all;
+}
+body:hover {
+	transform: rotate(720deg);
+} */
+
+
+
+ul, ol {
+	padding-left: 4rem;
+	margin-bottom: 1rem;
+}
+ul {
+	list-style-type: square;
+}
+ol {
+	list-style-type: lower-roman;
+}
+
+/* pseudo-classes */
+input:required {
+
+}
+button:enabled {
+
+}
+button:disabled {
+
+}
+input:invalid {
+
+}
+
+
+li:first-child {
+	background: lightpink;
+}
+li:last-child {
+	background: lightblue;
+}
+li:hover {
+	background: purple;
+	color: white;
+}
+
+/* li:nth-child(3n + 2) {
+	background: lightgoldenrodyellow;
+}
+li:nth-child(odd) {
+	background: lightgreen;
+} */
+
+p {
+	margin-bottom: 1rem;
+}
+
+h1 {
+	font-weight: bold; /* de echte UI'ers vinden dit niet tof */
+	font-size: 1.8rem;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	text-shadow: 0 0 4px purple;
+}
+
+blockquote {
+	background: lightgoldenrodyellow;
+	padding: 1.5rem;
+	margin: 1.8rem;
+	line-height: 1.5rem;
+	position: relative;
+	box-shadow: 0 0 10px 6px purple;
+	border-radius: 3rem 1rem 10rem 0.4rem; /* TRBL */
+	transition: all 2s ease;
+}
+blockquote:hover {
+	border-radius: 10px 50px 1em 5rem;
+	background: lightgreen;
+	transform: rotate(10deg) scale(1.2);
+}
+
+/* blockquote::before {
+	content: 'hoi before';
+} */
+blockquote::after { /* pseudo-elements */
+	content: '"';
+	position: absolute;
+	top: 15px;
+	right: 8px;
+	font-size: 4rem;
+	font-family: 'Yanone Kaffeesatz';
+}
+
+*::selection {
+	background: purple;
+	color: white;
+}
+
+main > p {
+	border-left: 10px solid green;
+}
+
+h1 ~ p { /* adjacent selectors: ~ + */ 
+	background: yellow;
+}
+
