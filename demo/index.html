@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		jouw-awesome-supersexy-element {
+			background: yellow;
+			padding: 7px;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<!-- section elements: HTML5 -->
+	<header>
+		Logo met slogan
+	</header>
+
+	<nav>
+		<ol>
+			<li><a href="#start">Start</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ol>
+	</nav>
+
+	<section>
+		<article>
+			<header>
+				<h1>Belangrijke heading</h1>
+			</header>
+
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, a?</p>
+
+
+			<!-- voor a11y wel opneemt op de pagina -->
+			<meter min="1" max="10" low="5" high="8" optimum="10" value="3">hoi!</meter>
+			<div class="meter" data-value="7" aria-hidden="true"></div>
+
+			<progress min="0" max="100" value="70"></progress>
+
+			<jouw-awesome-supersexy-element>wauw!</jouw-awesome-supersexy-element>
+
+			<footer>
+				Dit artikel is geschreven door een zeer kundig persoon en hij heeft veel gestudeerd.
+			</footer>
+		</article>
+
+		<article>
+			<h1>Embedded content</h1>
+
+			<!-- <video controls>
+				<source src="media/video1.ogv" type="video/ogv">
+				<source src="media/video1.mp4" type="video/mp4">
+				<source src="media/video1.webm" type="video/webm">
+			</video> -->
+			<!-- <audio src="" -->
+			<!-- <track> bij video voor ondertiteling, bij audio voor indexeren van geluidsfragmenten -->
+
+			<!-- Scalable Vector Graphics  -->
+			<!-- animaties gifjes -->
+			<svg>
+				<g onclick="">
+			</svg>
+
+			<img src="bla.svg"> <!-- hier geen javascript wegens XSS -->
+
+			<canvas width="400" height="300"></canvas>
+			<script>
+				let ctx = document.querySelector('canvas').getContext('2d');
+				ctx.fillStyle = 'purple';
+				ctx.fillRect(20, 40, 150, 100);
+			</script>
+
+
+		</article>
+
+		<article>
+			<h1>Form input types</h1>
+			<form>
+				text: <input type="text"><br>
+				checkbox: <input type="checkbox"><br>
+				radio: <input type="radio"><br>
+				password: <input type="password"><br>
+				date: <input type="date"><br>
+				datetime-local: <input type="datetime-local"><br>
+				week: <input type="week"><br>
+				month: <input type="month"><br>
+				number: <input type="number" step="10"><br>
+				time: <input type="time"><br>
+				color: <input type="color"><br>
+				tel: <input type="tel"><br>
+				email: <input type="email" pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9-]+\.nl$"><br>
+				file: <input type="file"><br><br><br>
+
+				button: <input type="button" value="Button"><br>
+				<!-- deze werd gebruikt om met JS dingen af te handelen -->
+				<!-- type button doet van zichzelf 0 nakkes noppes nada -->
+
+
+				submit: <input type="submit" value="Submit" name="hoi"><br>
+				submit: <input type="submit" value="Submit" name="doei"><br>
+				submit: <input type="submit" value="Submit" name="hallo"><br>
+				submit: <input type="submit" value="Submit" name="whatever"><br>
+				<!-- deze werd gebruikt om je form mee te submitten -->
+				<!-- type submit hele kleine vorm van input -->
+
+
+				<!-- deze gebruik je eigenlijk altijd vanaf nu -->
+				<!-- <button> in een form is by default een submit button-->
+				<!-- <button> buiten een form is by default een useless input type button -->
+				<!-- <button type="button"></button> -->
+				<button>
+					<img src="">
+					Aha!
+					<video></video>
+				</button>
+
+			</form>
+		</article>
+
+		<article>
+			<h1>Belangrijke heading</h1>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, a?</p>
+			<p>Atque velit vel ducimus perspiciatis! Facere ratione delectus officiis amet.</p>
+			<p>Natus non ratione repellendus reprehenderit ea animi sequi unde corrupti.</p>
+			<p>Nulla a provident at. Blanditiis quas magnam obcaecati voluptas eligendi!</p>
+			<p>Animi, quidem. Nesciunt vitae optio explicabo quisquam. Fugit, quaerat necessitatibus.</p>
+		</article>
+	</section>
+
+	<main>
+		<h1>Belangrijke heading</h1>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, a?</p>
+		<p>Atque velit vel ducimus perspiciatis! Facere ratione delectus officiis amet.</p>
+		<p>Natus non ratione repellendus reprehenderit ea animi sequi unde corrupti.</p>
+		<p>Nulla a provident at. Blanditiis quas magnam obcaecati voluptas eligendi!</p>
+		<p>Animi, quidem. Nesciunt vitae optio explicabo quisquam. Fugit, quaerat necessitatibus.</p>
+	</main>
+
+	<aside>
+		Verwante informatie
+
+		Advertenties
+	</aside>
+
+	<footer>&copy; JP ten Berge 2021 | Privacydingetjes | Disclaimeronzin</footer>
+
+</body>
+
+</html>
