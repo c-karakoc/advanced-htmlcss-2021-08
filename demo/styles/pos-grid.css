@@ -1,0 +1,38 @@
+
+
+header {
+	background: lightseagreen;
+	grid-row: 1;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+nav {
+	background: lightgreen;
+	grid-row: 2;
+	grid-column: 1;
+}
+article {
+	background: lightblue;
+	grid-row: 2;
+	grid-column: 2;
+}
+aside {
+	background: lightgray;
+	grid-row: 2;
+	grid-column: 3;
+}
+footer {
+	background: lightcoral;
+	grid-row: 3;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+html, body {
+	height: 100vh;
+}
+body {
+	display: grid;
+	grid-template-rows: 15vh 1fr 8vh; /* fraction */
+	grid-template-columns: 20vw 1fr 12vw;
+}
