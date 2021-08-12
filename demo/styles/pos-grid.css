@@ -2,30 +2,23 @@
 
 header {
 	background: lightseagreen;
-	grid-row: 1;
-	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-area: header;
 }
 nav {
 	background: lightgreen;
-	grid-row: 2;
-	grid-column: 1;
+	grid-area: nav;
 }
 article {
 	background: lightblue;
-	grid-row: 2;
-	grid-column: 2;
+	grid-area: content;
 }
 aside {
 	background: lightgray;
-	grid-row: 2;
-	grid-column: 3;
+	grid-area: aside;
 }
 footer {
 	background: lightcoral;
-	grid-row: 3;
-	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-area: footer;
 }
 
 html, body {
@@ -33,6 +26,7 @@ html, body {
 }
 body {
 	display: grid;
-	grid-template-rows: 15vh 1fr 8vh; /* fraction */
-	grid-template-columns: 20vw 1fr 12vw;
+	grid-template: 'header header header' 15vh
+	               'nav content aside' 1fr
+				   'footer footer footer' 8vh / 20vw 1fr 12vw;
 }
