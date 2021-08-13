@@ -1,0 +1,48 @@
+$base-color1: green;
+$base-color2: lighten($base-color1, 40%);
+$base-color3: red;
+$base-color4: blue;
+$base-color5: mix($base-color3, $base-color4);
+$container-size: 960px;
+
+@mixin small-caps() {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-variant: small-caps;
+	font-size: 1.4rem;
+}
+
+// supertof
+body {
+	font-family: sans-serif;
+}
+
+nav ol {
+	display: flex;
+	justify-content: flex-end;
+}
+nav a {
+	background: $base-color1;
+	color: white;
+	padding: 7px;
+	display: block;
+	margin-left: 1rem;
+
+	@include small-caps();
+
+	// nested styles
+	&:hover {
+		background: lighten($base-color5, 40%);
+	}
+}
+
+h1 {
+	@include small-caps();
+}
+
+subelement {
+	width: $container-size / 3 + 20px;
+}
+
+// @each
+// @for
+// @if

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="scripts/dom.js" defer></script>
+</head>
+
+<body>
+
+
+	<article>
+		<h1>Geolocation</h1>
+
+		<button onclick="getLocation();">Doe locatiebepaling</button>
+
+		<dl>
+			<dt>Latitude:</dt>
+			<dd id="latitude">(nog niet gezet)</dd>
+			<dt>Longitude:</dt>
+			<dd id="longitude">(nog niet gezet)</dd>
+			<dt>Accuracy:</dt>
+			<dd id="accuracy">(nog niet gezet)</dd>
+		</dl>
+
+		<script>
+			function getLocation() {
+
+				// navigator.geolocation.watchPosition() // lucluc
+
+				navigator.geolocation.getCurrentPosition(
+					pos => {
+						// pos.coords.
+						document.querySelector('#latitude').innerText = pos.coords.latitude;
+						document.querySelector('#longitude').innerText = pos.coords.longitude;
+						document.querySelector('#accuracy').innerText = pos.coords.accuracy;
+					},
+					err => {
+						console.error('Oh nee!', err);
+					},
+					{
+						enableHighAccuracy: true,
+						maximumAge: 5000
+					}
+				);
+			}
+		</script>
+	</article>
+
+	<article>
+		<h1>Web Storage</h1>
+
+		<!-- key-value stores
+		cookies - HTTP-request  HttpOnly tokens
+
+		local storage blijft altijd bewaard
+		session storage is van een tabblad
+		
+		cookiewetgeving - clientside opslaan
+		-->
+
+		Local Storage: <span id="loc-counter">(nog niet gezet)</span><br>
+		Session Storage: <span id="sess-counter">(nog niet gezet)</span>
+
+		<script>
+			// for (let i = 0; i < 10000; i++) {
+			// 	localStorage.counter++;
+
+			// 	// deadlocks
+			// }
+
+			if (!localStorage.myCounter) {
+				localStorage.myCounter = 0;
+			}
+			localStorage.myCounter++;
+			document.querySelector('#loc-counter').innerText = localStorage.myCounter;
+
+			if (!sessionStorage.myCounter) {
+				sessionStorage.myCounter = 0;
+			}
+			sessionStorage.myCounter++;
+			document.querySelector('#sess-counter').innerText = sessionStorage.myCounter;
+
+			/*
+			localStorage.myCounter
+			"33"
+			localStorage.myCounter = 99
+			99
+			localStorage.myCounter
+			"99"
+			localStorage.bla = { hoi: 'doei' };
+			{hoi: "doei"}
+			localStorage.bla
+			"[object Object]"
+			localStorage.bla = JSON.stringify({ hoi: 'doei' });
+			"{\"hoi\":\"doei\"}"
+			localStorage.bla
+			"{\"hoi\":\"doei\"}"
+			JSON.parse(localStorage.bla);
+
+			// persoonsgebonden is. niks ivm de GDPR - AVG
+			*/
+		</script>
+	</article>
+
+	<article>
+		<h1>DOM updates</h1>
+
+		<span id="update-me">update mij</span>
+	</article>
+</body>
+
+</html>
