@@ -257,3 +257,73 @@ webapplicaties   (jas maken)
 - Veel custom code
 - belastingaangifte
 - CMS  EMS  Enterprise Content Management System
+
+## inner
+
+.innerText
+.innerHTML
+.textContent
+
+## JavaScript for
+
+
+for...in
+
+for (let prop in obj) {
+
+}
+
+for (let prop of Object.keys(obj)) {
+
+}
+
+for (let item of iterable) { // Symbol.iterator
+
+}
+
+// AngularJS
+<tr ng-repeat="item in lijstje">
+
+// Angular
+<tr *ngFor="let item of lijstje">
+
+
+## PRPL
+
+
+
+Push critical resources
+Render initial page
+Pre-cache additional routes
+Lazy-load the other stuff
+
+PWA / SPA
+
+## Web Sockets
+
+- chatten
+- multiplayer gaming
+- IoT  dashboard
+- poll
+- nieuws / fake nieuwswebsites nu.nl facebook twitter
+- thuisbezorgd/domino's
+- stackoverflow (2008)
+- google docs   - no polling
+
+realtime communicatie
+
+WebSocket-protocol: HTTP => handshake => TCP
+
+## Web Components
+
+<app-autocompleter></app-autocompleter>
+
+vue react angular
+
+AngularJS       Angular
+
+Web Components
+
+webcomponent "self-containing"
+
+"microservices frontend"
